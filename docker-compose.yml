@@ -103,6 +103,7 @@ services:
       - "${ELASTICSEARCH_HOST_HTTP_PORT}:9200"
     volumes:
       - ${ELASTICSEARCH_DATA_DIR}:/usr/share/elasticsearch/data
+      - ${ELASTICSEARCH_CONF_DIR}:/usr/share/elasticsearch/config
       - ./config/elasticsearch/analysis/:/usr/share/elasticsearch/config/analysis
     environment:
       - "ES_JAVA_OPTS=-Xms512m -Xmx512m"
